@@ -28,10 +28,10 @@ if ! which shorewall > /dev/null; then
 
 	# setup autostart for vpn docker instance
 	sudo cp -p start-vpn.sh /usr/local/bin/
-	sudo cp ${COMPNAY}-vpn.service /etc/systemd/system/
+	sudo cp vpn.service /etc/systemd/system/
 	sudo systemctl daemon-reload
-	sudo systemctl enable ${COMPNAY}-vpn.service
-	sudo systemctl start ${COMPNAY}-vpn.service
+	sudo systemctl enable vpn.service
+	sudo systemctl start vpn.service
 else
 	echo -e "\n\n\e[1;34mShorewall and docker installed! Continuing ....\e[0m\n\n"
 fi 

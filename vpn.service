@@ -1,0 +1,9 @@
+[Unit]
+After=docker.service
+
+[Service]
+ExecStart=/usr/local/bin/start-vpn.sh
+
+[Install]
+WantedBy=multi-user.target
+Alias=vpn.service
